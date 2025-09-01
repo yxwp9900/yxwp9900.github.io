@@ -186,7 +186,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2025-09-01 22:30:02" itemprop="dateModified" datetime="2025-09-01T22:30:02+08:00">2025-09-01</time>
+                <time title="Modified: 2025-09-01 22:40:00" itemprop="dateModified" datetime="2025-09-01T22:40:00+08:00">2025-09-01</time>
               </span>
 
           
@@ -213,46 +213,14 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">brew bundle dump &gt; Brewfile<br></code></pre></td></tr></table></figure>
 
 <p>这会生成一个 <code>Brewfile</code> 文件，包含所有已安装软件包及其版本信息。</p>
-<h2 id="二、恢复软件包列表"><a href="#二、恢复软件包列表" class="headerlink" title="二、恢复软件包列表"></a>二、恢复软件包列表</h2><ol>
-<li>‌<strong>从 <code>brew_packages.txt</code> 恢复</strong>‌</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">xargs brew install &lt; brew_packages.txt<br></code></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>‌<strong>从 <code>Brewfile</code> 恢复</strong>‌</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">brew bundle install<br></code></pre></td></tr></table></figure>
-
-
-<h2 id="三、高级备份选项"><a href="#三、高级备份选项" class="headerlink" title="三、高级备份选项"></a>三、高级备份选项</h2><ol>
-<li>‌<strong>备份特定类别的软件包</strong>‌</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">只备份核心软件包</span><br>brew list --formula &gt; formula_list.txt<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">只备份图形界面应用</span><br>brew list --cask &gt; casks_list.txt<br></code></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>‌<strong>包含软件版本信息</strong>‌</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">brew list --versions &gt; brew_versions.txt<br></code></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>‌<strong>定期自动备份</strong>‌<br>可以设置 cron 任务定期自动备份：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">编辑</span><br>crontab crontab -e <br><span class="hljs-meta prompt_"># </span><span class="language-bash">添加以下行（每天凌晨1点备份）</span> <br>0 1 * * * /usr/local/bin/brew bundle dump &gt; ~/Brewfile_$(date +\%Y\%m\%d)<br></code></pre></td></tr></table></figure>
-
-
-<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><ol>
-<li><p>‌<strong>备份文件存储</strong>‌<br> 建议将备份文件存储在云存储（如 iCloud、Dropbox）或外部硬盘中。</p>
-</li>
-<li><p>‌<strong>跨平台兼容性</strong>‌<br> <code>Brewfile</code> 格式在不同 macOS 版本间兼容性更好。</p>
-</li>
-<li><p>‌<strong>大型安装</strong>‌<br> 如果安装了数百个软件包，<code>brew bundle</code> 可能需要较长时间生成文件。</p>
-</li>
-<li><p>‌<strong>网络依赖</strong>‌<br> 恢复时需要保持网络连接，因为 Homebrew 需要从远程仓库下载软件包。</p>
-</li>
-<li><p>‌<strong>权限问题</strong>‌<br> 如果遇到权限问题，可以在命令前加 <code>sudo</code>，但通常不建议这样做。</p>
-</li>
-</ol>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/08/31/54e35f4c-63c2-4b44-bebf-7fd5b26bb83c/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
